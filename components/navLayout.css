@@ -1,0 +1,61 @@
+
+.animate__animated.animate__fadeIn {
+  --animate-duration: 4s;
+}
+.animate__animated.animate__slideInDown{
+  --animate-duration: 3s;
+}
+
+.nav {
+  transition: all 0.3s linear;
+  width: 100%;
+  position: fixed;
+  z-index: 2000;
+  top:0;
+  left: 0;
+  font-weight:500;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.nav div{
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: nowrap;
+}
+
+.navbar {
+  width: 100%;
+  padding-left: 10%;
+  padding-right: 10%;
+  font-weight:500;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.scrollNav {
+  transition: all 0.5s ease-in;
+  background: #ffffff;
+}
+
+.principal{
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center;
+  width: 95%;
+}
+
+.menu{
+  width: 385px;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between !important;
+  letter-spacing: 1px;
+  font-size: 13px;
+  position: relative;
+  right: 0;
+}
+
+a{
+  color: black !important;
+  text-decoration: none !important;
+}
+

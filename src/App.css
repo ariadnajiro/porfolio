@@ -1,0 +1,39 @@
+.App{
+  /* min-height: 100vh; */
+  height: 1000px;
+  display: flex;
+  font-size: calc(10px + 2vmin);
+  width: 100%;
+}
+
+.container-fluid{
+  background-color: white !important;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 2000px;
+}
+
+.apartado{
+  width: 100%;
+  margin-top: 100px;
+  height: 100px;
+  font-family: 'Playfair Display', serif;  
+  font-weight: bold;
+  font-size: 25px;
+  text-align: center;
+}
+
+@media only screen and (max-width: 992px) {
+  .container-fluid{
+      background-color: white !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .container-fluid{
+      background-color: white !important;  
+  }
+}

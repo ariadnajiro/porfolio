@@ -1,0 +1,19 @@
+#cont_header{
+    background-color: aliceblue;
+    height: 400px;
+    width: 100%;
+    margin: auto;
+
+}
+
+@media only screen and (max-width: 992px) {
+    #cont_header{
+        background-color: salmon;
+    }
+  }
+
+@media only screen and (max-width: 768px) {
+    #cont_header{
+        background-color: rgb(33, 115, 147);  
+    }
+  }
