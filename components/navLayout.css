@@ -10,7 +10,7 @@
   transition: all 0.3s linear;
   width: 100%;
   position: fixed;
-  z-index: 2000;
+  z-index: 2;
   top:0;
   left: 0;
   font-weight:500;

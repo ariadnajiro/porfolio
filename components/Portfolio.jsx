@@ -1,7 +1,15 @@
-import { Navbar, Nav, Container, NavLink, Row, Col } from "react-bootstrap";
+import {
+  Navbar,
+  Nav,
+  Container,
+  NavLink,
+  Row,
+  Modal,
+  Col,
+} from "react-bootstrap";
+import { useState } from "react";
 
 function Portfolio() {
-
   const proyectos = [
     { id: 1, url: "https://unsplash.it/500/700" },
     { id: 2, url: "https://unsplash.it/800/400" },
@@ -14,12 +22,22 @@ function Portfolio() {
   ];
 
   let fotografias = proyectos.map((foto) => {
+    const [show, setShow] = useState(false);
+
+    const handleClose = () => setShow(false);
+    const handleShow = () => setShow(true);
     return (
       <>
         <div class="content flow">
-          <img src={foto.url} alt=""/>
+          <img src={foto.url} alt="" onClick={handleShow} />
         </div>
 
+        <Modal show={show} onHide={handleClose} animation={false}>
+          <Modal.Body>
+            {" "}
+            <img src={foto.url} alt="" />
+          </Modal.Body>
+        </Modal>
       </>
     );
   });
@@ -35,6 +53,5 @@ function Portfolio() {
     </>
   );
 }
-
 
 export default Portfolio;

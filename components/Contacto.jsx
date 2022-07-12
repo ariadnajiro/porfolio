@@ -5,9 +5,7 @@ function Contacto() {
     <>
       <Row id="contact">
         <div id="cont_contacto">
-          <div className="apartado" id="sobremua">
-            Sobre mi
-          </div>
+          <div className="apartado">Contacto</div>
         </div>
       </Row>
     </>
