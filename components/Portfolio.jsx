@@ -28,7 +28,7 @@ function Portfolio() {
     const handleShow = () => setShow(true);
     return (
       <>
-        <div class="content flow">
+        <div className=" content flow">
           <img src={foto.url} alt="" onClick={handleShow} />
         </div>
 
