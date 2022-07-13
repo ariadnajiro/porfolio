@@ -2,7 +2,7 @@ import {
   Navbar,
   Nav,
   Container,
-  NavLink,
+  Carousel,
   Row,
   Modal,
   Col,
@@ -22,10 +22,18 @@ function Portfolio() {
   ];
 
   let fotografias = proyectos.map((foto) => {
+
     const [show, setShow] = useState(false);
 
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
+
+    //carrousel
+    const [index, setIndex] = useState(0);
+    const handleSelect = (selectedIndex, e) => {
+      setIndex(selectedIndex);
+    };
+
     return (
       <>
         <div className=" content flow">
@@ -35,9 +43,21 @@ function Portfolio() {
         <Modal show={show} onHide={handleClose} animation={false}>
           <Modal.Body>
             {" "}
-            <img src={foto.url} alt="" />
+            <Carousel activeIndex={index} onSelect={handleSelect}>
+              <Carousel.Item>
+                <img src={foto.url} alt="" />
+                <Carousel.Caption>
+                  <h3>Títol</h3>
+                  <p>
+                    Nulla vitae elit libero, a pharetra augue mollis interdum.
+                  </p>
+                </Carousel.Caption>
+              </Carousel.Item>
+            </Carousel>
           </Modal.Body>
         </Modal>
+
+        {/* kdaf */}
       </>
     );
   });
